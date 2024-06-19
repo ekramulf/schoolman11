@@ -1,6 +1,6 @@
 <h2> About Page</h2>
 
-<form action="postattend" method="post">
+<form action="postat" method="post">
     @csrf
 
     <label for="fname">First name:</label><br>

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('studid');
             $table->string('subcode');
             $table->date('attndate');
-            $table->char('"present')->default('1');
+            $table->char('present')->default('1');
             $table->timestamps();
         });
     }
