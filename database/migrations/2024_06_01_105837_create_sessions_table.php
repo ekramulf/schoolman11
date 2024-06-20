@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sessionsyear', function (Blueprint $table) {
             $table->id();
-            $table->string('sessionyear')->unique('UK_SESSION_ID');
+            $table->string('sessionyr')->unique('UK_SESSION_ID');
             $table->char('status')->default('0');
             $table->timestamps();
         });
