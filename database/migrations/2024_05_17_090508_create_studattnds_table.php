@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('teachid');
             $table->string('studid');
             $table->string('subcode');
+            $table->string('sessionyr');
             $table->date('attndate');
             $table->char('present')->default('1');
             $table->timestamps();

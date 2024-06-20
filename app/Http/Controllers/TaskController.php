@@ -56,9 +56,9 @@ class TaskController extends Controller
                 if (strlen($mystring) > 0)
                     $strarr = str_getcsv($mystring);
                     $arrcount = count($strarr);
-                    for ($i = 4; $i < $arrcount; $i++)
+                    for ($i = 5; $i < $arrcount; $i++)
                     {                                    
-                        DB::insert('INSERT INTO studattnds (devid,teachid,subcode,attndate,studid) VALUES (?,?,?,?,?)', [$strarr[0], $strarr[1],$strarr[2],$strarr[3],$strarr[$i]]);
+                        DB::insert('INSERT INTO studattnds (devid,teachid,subcode,sessionyr,attndate,studid) VALUES (?,?,?,?,?,?)', [$strarr[0], $strarr[1],$strarr[2],$strarr[3],$strarr[4],$strarr[$i]]);
                     }                
             //}
 

@@ -174,7 +174,7 @@ CREATE TABLE IF NOT EXISTS `studattnds` (
   `studid` varchar(255) NOT NULL,
   `subcode` varchar(255) NOT NULL,
   `attndate` date NOT NULL,
-  `"present` char(255) NOT NULL DEFAULT '1',
+  `present` char(1) NOT NULL DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
