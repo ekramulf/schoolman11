@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sessions', function (Blueprint $table) {
+        Schema::create('sessionsyear', function (Blueprint $table) {
             $table->id();
             $table->string('sessionyear')->unique('UK_SESSION_ID');
             $table->char('status')->default('0');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sessions');
+        Schema::dropIfExists('sessionsyear');
     }
 };
