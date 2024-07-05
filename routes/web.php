@@ -24,6 +24,7 @@ Route::get('/about', function () {
 
 // Interface with Remote Attendance Device
 Route::get('/getcourse', [TaskController::class, 'getcourse']);
+Route::get('/getstudinfo', [TaskController::class, 'getstudinfo']);
 Route::post('/postat', [TaskController::class, 'postat']);
 
 //User = admin112, admin112@gmail.com Password = admin112abc

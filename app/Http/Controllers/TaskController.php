@@ -42,6 +42,36 @@ class TaskController extends Controller
             return response()->json([$class_sub]);
         }
 
+        /* Students table - 
+            'deptcode',
+            'sessionyr',
+            'studroll',
+            'studregno',
+            'studname',
+            'gender',
+            'studphoto',
+            'idcardno',
+        */
+
+        public function getstudinfo(Request $request)
+        {
+            $devid = $request->input('id');
+            $subcode = $request->input('subcode');
+            $sesionyr = $request->input('session');
+            $rfcardid = $request->input('studid');
+
+            /* Later, change is required in such a way that the student's actual deptcd can be retrieved from the subject code, not the subject offering department
+            */
+
+            $deptcode = substr($subcode, 0 , 3);
+            
+            $studnm = DB::table('students')->where('deptcode', $deptcode)
+                ->where('idcardno', $rfcardid)
+                ->value('studname');
+            
+            return $studnm;
+        }
+
         public function postat(Request $request)
         {
             $mystring = $request->input('thename');
